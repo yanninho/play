@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER	Yannick Saint Martino 
 
-ENV PLAY_VERSION 2.1.0
+ENV PLAY_VERSION 2.3.5
 
 RUN apt-get -y update
 
