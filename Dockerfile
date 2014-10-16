@@ -1,4 +1,4 @@
-FROM ubuntu:14.04 
+FROM debian
 
 MAINTAINER	Yannick Saint Martino 
 
@@ -12,6 +12,8 @@ RUN apt-get install -y unzip
 
 #install jdk
 RUN apt-get install --no-install-recommends -y openjdk-7-jdk
+
+RUN rm -rf /var/lib/apt/lists/*
 
 #install play framework
 ADD http://downloads.typesafe.com/play/$PLAY_VERSION/play-$PLAY_VERSION.zip /tmp/play-$PLAY_VERSION.zip
